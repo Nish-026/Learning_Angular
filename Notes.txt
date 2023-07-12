@@ -1,0 +1,74 @@
+what is angular?
+
+A UI framework built by google
+A component based framework for building scalable app
+Provided collection of libraries to cover features like Routing, Forms
+
+What are frameworks?
+
+Framework generally contains set of libraries
+You can extend the frameworks
+Some examples are angular, .Net, Ionic, ExpressJS
+
+What are libraries?
+
+Libraries generally perform specific operation
+You can combine multiple Libs to build apps
+Some examples are React, MomentJS, Lodash
+
+Features of angular
+- Forms
+- Observable
+- Template
+- Routing
+- PWA
+- Data Binding
+
+Introduction to Typescript
+
+-Typescript is a strongly Typed programming language
+-Created and maintained by Microsoft
+-Superset of javascript
+
+Why Typescript?
+- Compiles to javascript
+- Keeps your code evergreen
+- Supported by all major libraries and frameworks
+
+Ensures Type Safety
+- Keeps your application free from Type Errors
+- Language like c#, java are example of type safe language
+- Keeps your JS code free from undefined and null values
+- in Typescript Types are stripped when your code is converted to JS
+
+Installing and Creating First Typescript Program 
+- Install Node
+- Use latest version of node.JS
+- npm init to create package.json
+- install typescript `npm i typescript`
+- initialize typescript
+- `tsc --init`
+
+What is single Page application?
+
+- You can use modern frameworks like Angular, React or VUE to create SPA
+- SPA does not make requests to server for every URL requests
+
+Angular and SPA?
+- ANgular has routing functionality to create SPA
+- Angular also offers SSR (Server Side Rendering) which supports SPA
+
+
+Data Types
+- String 
+- number
+- boolean
+- array
+- enum = An enum, short for "enumeration," is a data type in programming that represents a set of predefined named values. It is used to define a collection of constants that have a specific meaning within a given context.
+- tuple = A tuple is an ordered, immutable collection of elements. It is a data structure that allows you to store multiple items of different types in a single container. Tuples are often used when you want to group related data together, but the elements within the tuple should not be modified individually
+- any
+- void
+- never
+
+Decorators
+- 
