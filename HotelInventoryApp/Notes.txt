@@ -1,0 +1,79 @@
+What is repo?
+
+-Create and maintain multiple apps in same repo
+-Use libraties withing the project
+-Deploy multiple apps/libs form same repo
+-easy to share code within the project
+
+what is binding syntax?
+
+In the context of the Angular framework, 
+binding syntax refers to the way data is 
+bound or connected between the component's 
+logic and the template. Angular provides 
+several types of binding syntax to handle 
+different scenarios. Here are some common 
+binding syntax used in Angular:
+
+1. Interpolation ({{ }}): Interpolation is used to bind a component property to a placeholder in the template. 
+It allows you to display the value of a property dynamically. For example:
+
+<h1>Welcome, {{ name }}!</h1>
+
+2. Property binding ([ ]): Property binding allows you to bind a component property to an HTML element's property or attribute. It sets the value of the element's property based on the component's property value. For example:
+<input [value]="username">
+
+3. Event binding (( )): Event binding allows you to bind a component method to an HTML element's event. It triggers the method when the specified event occurs on the element. For 
+<button (click)="save()">Save</button>
+
+4. Two-way binding ([(ngModel)]): Two-way binding combines property binding and event binding to establish a two-way connection between a component property and an input element. It reflects changes in both directions, updating the component property when the input changes and updating the input when the component property changes. For example:
+<input [(ngModel)]="username">
+
+5. Attribute binding ([attr.name]): Attribute binding allows you to set an HTML element's attribute dynamically based on a component property. It can be used to add, remove, or modify HTML attributes. For example:
+<button [attr.disabled]="isDisabled">Submit</button>
+
+What are directives?
+
+Directives are use to change the behavior and appearance of DOM element
+Directives can implement all lifecycle hooks
+Directives cannot have template
+The main diff between directives and components are that they do not have templates
+
+Types of Directives
+- structural directives
+- Attribute directives
+
+Built-in Directives
+= *ngif
+= *ngfor
+= *ngSwitch
+= ngClass
+= ngStyle
+
+* lets you know its structural directives
+
+
+What is pipes?
+
+Pipes are used for data transformation
+
+built-in-pipes
+1. DatePipe => It changes the long date into short date used using  | date
+2. Uppercase => It cahnges the text into uppercase
+3. Lowercase => It cahnges the text into lowercase
+4. CurrencyPipe => 
+5. Decimal Pipe => 
+6. Percent Pipe => which will value in percent
+7. Json Pipe => 
+8. Slice Pipe =>
+9. Async Pipe => 
+
+lifecycle Hooks?
+
+Component instance has lifecycle hooks which can help you to hook into different events on components
+lifecycle ends when component is destroyed
+
+
+
+
+
