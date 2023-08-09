@@ -1,0 +1,11 @@
+-> commands for creating new application
+npm install -g @angular/cli
+ng new app-name
+
+-> to create component
+ ng g c component-name 
+ now if you want to add a component inside a folder then you can write
+ ng g c recipes/recipe-list
+
+ 
+
