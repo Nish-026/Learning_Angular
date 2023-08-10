@@ -1,0 +1,15 @@
+.dropdown{
+    display:flex;
+}
+.dropdown>button{
+ width: 24%;
+ margin: auto;
+ background-color:white;
+ color:grey;
+}
+#headingOne a{
+  text-decoration: none;
+}
+#headingOne h6{
+    color:rgb(34, 163, 34);
+}
