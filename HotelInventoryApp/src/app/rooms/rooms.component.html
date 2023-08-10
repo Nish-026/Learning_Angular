@@ -1,16 +1,17 @@
 <!-- this is interpolation -->
-<h1>Welcome to {{hotelName}}</h1> 
+<app-header></app-header>
 <!-- This is property binding -->
 
 <div [hidden]="hideRooms">
     Number of Rooms:<div [innerText]="numberofRooms"></div>
 </div>
 {{ rooms.availableRooms ?? 'No Rooms'}}
+
 <div>
     <button (click)="addRoom()">Add Room</button>
 </div>
 <button (click)="toggle()">Toggle</button>
 <div *ngIf="rooms?.availableRooms">
-    <app-rooms-list [rooms]="roomList" (selectedRoom)="selectRoom($event)"></app-rooms-list>
+    <app-rooms-list [rooms]="roomList" (selectedRoom)="selectRoom($event)" [title]="title"></app-rooms-list>
 </div>
 

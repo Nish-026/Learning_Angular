@@ -1,0 +1,25 @@
+what are directives ?
+Directives are instructions in the DOM
+
+
+
+`ngClass` and `ngStyle` are both Angular directives used to apply styles dynamically to elements, but they have different use cases and functionalities:
+
+1. `ngClass`:
+   - Purpose: `ngClass` is used to conditionally apply one or more CSS classes to an element based on certain conditions or expressions.
+   - Usage: It allows you to toggle classes on and off based on conditions in your component.
+   - Syntax: `[ngClass]="{'class-name': condition}"`. You can apply multiple classes by using an object or array syntax.
+   - Example:
+     <div [ngClass]="{'highlight': isHighlighted, 'active': isActive}">Some content</div>
+     
+   - In this example, the classes "highlight" and "active" will be applied to the `<div>` element if `isHighlighted` and `isActive` are true, respectively.
+
+2. `ngStyle`:
+   - Purpose: `ngStyle` is used to apply one or more inline CSS styles directly to an element based on expressions or function return values.
+   - Usage: It allows you to set individual CSS styles dynamically.
+   - Syntax: `[ngStyle]="{'style-property': value}"`. You can apply multiple styles by using an object syntax.
+   - Example:
+     <div [ngStyle]="{'color': textColor, 'font-size': fontSize + 'px'}">Some content</div>
+   - In this example, the `color` and `font-size` styles will be applied to the `<div>` element based on the values of `textColor` and `fontSize` variables.
+
+In summary, `ngClass` is useful when you want to toggle the application of entire CSS classes based on conditions, while `ngStyle` is more suitable for setting individual CSS styles dynamically based on expressions or function return values. Both directives can be used together if you need to apply both classes and inline styles to an element.

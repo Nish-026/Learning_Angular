@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-xs-12">
+        <p class="m-6">Add new servers</p>
+        <label>Server Name</label>
+        <!-- <input type="text" class="form-control" [(ngModel)]="newServerName"> // this is for 2 way binding -->
+        <input type="text" class="form-control" #serverNameInput>
+        <label>Server Content</label>
+        <!-- <input type="text" class="form-control" [(ngModel)]="newServerContent"> // this is for 2 way binding -->
+        <input type="text" class="form-control" 
+        #serverContentInput>
+        <br>
+        <button (click)="onAddServer(serverNameInput)">
+            Add Server
+        </button>
+        <button class="rounded bg-blue-500 p8" (click)="onAddBlueprint(serverNameInput)">
+            Add Server blueprint
+        </button>
+    </div>
+</div>
+
+<!-- we are using ng model here which is 2 way binding , we can also pass local reference here using view child -->

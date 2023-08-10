@@ -1,17 +1,25 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges,SimpleChanges,ChangeDetectionStrategy} from '@angular/core';
 import { RoomList } from '../rooms';
-import { ChangeDetectionStrategy } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-rooms-list',
   templateUrl: './rooms-list.component.html',
   styleUrls: ['./rooms-list.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RoomsListComponent implements OnInit {
+export class RoomsListComponent implements OnInit, OnChanges {
   
   @Input() rooms: RoomList[]=[]
+  @Input() title: string="";
   @Output() selectedRoom = new EventEmitter<RoomList>();
 
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes)
+    if(changes['title']){
+        this.title= changes['title'].currentValue.toUpperCase()
+    }
+  }
   constructor(){
 
   }

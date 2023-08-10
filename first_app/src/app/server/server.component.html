@@ -1,1 +1,32 @@
 <p>Hi this is server</p>
+<!-- Example of string interpolation -->
+<!-- <p>{{name}}</p>   -->
+ <!-- this is property binding -->
+<button [disabled]="!allowedServer">Add new Server</button>
+<!-- this is event binding -->
+<button (click)="createServer()">{{serverCreationStatus}}</button>
+
+<!-- Passing and using Data with event binding -->
+<input
+ type="text"
+ class="form-control"
+ (input)="onUpdate($event)">
+ <p>{{serverUpdate}}</p>
+
+ <!-- Two way binding -->
+
+ <input
+ type="text"
+ class="form-control"
+ [(ngModel)]="serverUpdate"
+ >
+
+ <button (click)="createServer()">Tap here to create a server</button>
+<p *ngIf="serverCreated">{{serverCreationStatus}}</p>
+  <!-- ngStyle dynamically allows to update the style -->
+<p [ngStyle]="{backgroundColor: getColor(), 'color':'white'}">Hi this is my status</p>
+<button (click)="turnStatus()">Turn status</button>
+<p *ngFor="let server of servers; let i=index">{{server}}</p>
+<!-- for adding the index, we write let i=index -->
+
+

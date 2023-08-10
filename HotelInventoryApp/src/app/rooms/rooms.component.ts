@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, DoCheck } from '@angular/core';
 import { RoomList } from './rooms';
 import { Room } from './rooms';
 @Component({
@@ -7,7 +7,7 @@ import { Room } from './rooms';
   styleUrls: ['./rooms.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RoomsComponent implements OnInit, OnChanges {
+export class RoomsComponent implements OnInit, DoCheck {
   hotelName = 'Leela';
   hideRooms = false;
   rooms: Room = {
@@ -15,6 +15,7 @@ export class RoomsComponent implements OnInit, OnChanges {
     availableRooms: 20,
     bookedRooms: 5,
   };
+  title="Room List";
   roomList: RoomList[] = [];
   constructor() {}
   ngOnInit(): void {
@@ -37,12 +38,13 @@ export class RoomsComponent implements OnInit, OnChanges {
       },
     ];
   }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes)
+  ngDoCheck(): void {
+    console.log('on changes is called')
   }
   numberofRooms = 10;
   toggle() {
     this.hideRooms = !this.hideRooms;
+    this.title= "Rooms List"
   }
   selectRoom(room:RoomList){
     console.log(room);
@@ -59,3 +61,4 @@ export class RoomsComponent implements OnInit, OnChanges {
     this.roomList= [...this.roomList,room];
   }
 }
+
